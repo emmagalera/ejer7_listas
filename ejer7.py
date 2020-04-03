@@ -3,7 +3,7 @@ import os
 try:
     #menu
     inicio="inicio"
-    where inicio=="inicio":
+    while inicio=="inicio":
         os.system ("cls")  
         print("Situación epidemiológica del coronavirus (COVID-19) en Castilla y León ")
         print ("Actualización diaria. Datos a ",time.strftime("%d/%m/%y"))
@@ -95,7 +95,7 @@ try:
         return listaNuevos
         input("\nPulse cualquier tecla para continuar...")
         
-    def opcion4():
+    def opcion4(listaProvincia,listaConfirmados,listaNuevos):
         #Listado de la situacion  general por provincias(confirmados y nuevos)
         for elemento in range(0,len(listaProvincia)):
             print(elemento)
@@ -103,6 +103,7 @@ try:
             print(elementoDos)
         for elementoTres in range(0,len(listaNuevos)):
             print(elementoTres)
+        return listaProvincia,listaConfirmados,listaNuevos
         
 except ValueError:
     print("No pude convertir el dato a un entero.")
